@@ -1,0 +1,11 @@
+.snake {
+    background-color: dodgerblue;
+    border: .25vmin solid black;
+
+}
+
+.food {
+background-color: greenyellow;
+border: .25vmin solid black;
+
+}
