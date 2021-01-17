@@ -35,8 +35,9 @@ export function zvetseniHada(amount) {
 }
 
 export function naHadovi(position, {ignoreHead = false} = {}) {
-    return teloHada.some(segment => {
-        return equalPositions(segment, position)
+    return teloHada.some ((segment, index) => {
+        if(ignoreHead && index === 0) return false
+            return equalPositions(segment, position)
     })
 }
 
