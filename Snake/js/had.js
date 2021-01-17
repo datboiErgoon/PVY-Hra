@@ -1,6 +1,6 @@
 import { getInputDirection } from "./input.js"
 
-export const RYCHLOST_HADA = 6
+export const RYCHLOST_HADA = 7
 const teloHada= [{ x: 11, y:11 }]
 
 let newSegments = 0
