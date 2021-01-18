@@ -12,7 +12,7 @@ let whiteTheme = document.getElementById("theme");
 function main(currentTime) {
     if(gameOver) {
        if(confirm('Prohráli jste. Stiskněte OK a zkuste to znovu.')) {
-           window.location = 'snake.html'
+           window.location = 'index.html'
        }
        return
     }
