@@ -3,7 +3,7 @@ import { randomGridPosition } from './grid.js'
 import { naHadovi, zvetseniHada } from './had.js'
 
 let jidlo = randomPoziceJidla()
-const EXPANSION_RATE = 2
+export let EXPANSION_RATE = 2
 
 export function update() {
     if(naHadovi(jidlo)) {

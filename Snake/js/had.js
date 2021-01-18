@@ -1,7 +1,8 @@
 import { getInputDirection } from "./input.js"
+export let RYCHLOST_HADA = 7
 
-export const RYCHLOST_HADA = 7
 const teloHada= [{ x: 11, y:11 }]
+let hardMode = document.getElementById("hard");
 
 let newSegments = 0
 
@@ -11,8 +12,6 @@ export function update() {
     for(let i = teloHada.length - 2; i >= 0; i--) {
         teloHada[i + 1] = { ...teloHada[i] }
     }
-
-
     teloHada[0].x += inputSmer.x
     teloHada[0].y += inputSmer.y
 }
@@ -61,3 +60,14 @@ function addSegments() {
 export function hlavaHada() {
     return teloHada[0]
 }
+
+hardMode.addEventListener('change', function() { 
+    if (this.checked) {
+     RYCHLOST_HADA = 20;
+     EXPANSION_RATE = 4;
+    } 
+    else {
+      RYCHLOST_HADA = 7;
+      EXPANSION_RATE = 2;
+      }
+    });
