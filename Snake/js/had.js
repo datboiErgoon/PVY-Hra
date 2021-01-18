@@ -1,5 +1,5 @@
 import { getInputDirection } from "./input.js"
-export let RYCHLOST_HADA = 7
+export let RYCHLOST_HADA = 8
 
 const teloHada= [{ x: 11, y:11 }]
 let hardMode = document.getElementById("hard");
@@ -63,11 +63,12 @@ export function hlavaHada() {
 
 hardMode.addEventListener('change', function() { 
     if (this.checked) {
-     RYCHLOST_HADA = 20;
-     EXPANSION_RATE = 4;
+        if(confirm('Vážně chcete spustit Těžký mód?')) {
+            confirm('Těžký režim je doporučen jen pro ty nejnáročnější hráče hry Snake. Opravdu si přejete pokračovat?')
+        }
+     RYCHLOST_HADA = 21;
     } 
     else {
-      RYCHLOST_HADA = 7;
-      EXPANSION_RATE = 2;
+      RYCHLOST_HADA = 8;
       }
     });

@@ -58,8 +58,12 @@ whiteTheme.addEventListener('change', function() {
       document.getElementById("herniPlocha").style.backgroundColor = "white";
       document.getElementById("herniPlocha").style.color = "black";
       document.getElementById("herniPlocha").style.borderColor = "black";
-      document.getElementById("snake").style.color = "black";
-      document.getElementById("snake2").style.color = "black";
+      document.getElementById("hjedna").style.color = "black";
+      document.getElementById("hjedna").style.borderColor = "black";
+      document.getElementById("dif").style.color = "black";
+        
+
+      
       
 
     } else {
@@ -68,8 +72,9 @@ whiteTheme.addEventListener('change', function() {
       document.getElementById("herniPlocha").style.backgroundColor = "black";
       document.getElementById("herniPlocha").style.color = "white";
       document.getElementById("herniPlocha").style.borderColor = "white";
-      document.getElementById("snake").style.color = "white";
-      document.getElementById("snake2").style.color = "white";
+      document.getElementById("hjedna").style.color = "white";
+      document.getElementById("hjedna").style.borderColor = "white";
+      document.getElementById("dif").style.color = "white";
     }
   });
 
