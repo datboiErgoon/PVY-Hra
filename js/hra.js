@@ -61,6 +61,9 @@ whiteTheme.addEventListener('change', function() {
       document.getElementById("hjedna").style.color = "black";
       document.getElementById("hjedna").style.borderColor = "black";
       document.getElementById("dif").style.color = "black";
+      document.getElementById("hdva").style.color = "black";
+      document.getElementById("hdva").style.borderColor = "black";
+      document.getElementById("dif2").style.color = "black";
         
 
       
@@ -75,6 +78,9 @@ whiteTheme.addEventListener('change', function() {
       document.getElementById("hjedna").style.color = "white";
       document.getElementById("hjedna").style.borderColor = "white";
       document.getElementById("dif").style.color = "white";
+      document.getElementById("hdva").style.color = "white";
+      document.getElementById("hdva").style.borderColor = "white";
+      document.getElementById("dif2").style.color = "white";
     }
   });
 

@@ -63,7 +63,7 @@ export function hlavaHada() {
 
 hardMode.addEventListener('change', function() { 
     if (this.checked) {
-        if(confirm('Vážně chcete spustit Těžký mód?')) {
+        if(confirm('Vážně chcete spustit Těžký režim?')) {
             confirm('Těžký režim je doporučen jen pro ty nejnáročnější hráče hry Snake. Opravdu si přejete pokračovat?')
         }
      RYCHLOST_HADA = 21;
