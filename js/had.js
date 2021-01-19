@@ -1,11 +1,13 @@
 import { getInputDirection } from "./input.js"
 export let RYCHLOST_HADA = 9
 
+// Konstanta, která spawne hada doprostřed obrazovky
 const teloHada= [{ x: 11, y:11 }]
 let hardMode = document.getElementById("hard");
 let newSegments = 0
 let audio1 = new Audio('sound/hardmode.mp3');
 
+// Funkce pro zvětšování těla hada
 export function update() {
     addSegments()
     const inputSmer = getInputDirection()
@@ -18,8 +20,9 @@ export function update() {
 
 export function draw(herniPlocha){
 
+// Vykreslení hada 
 teloHada.forEach(segment => {
-    
+
 const hadElement = document.createElement('div')
     hadElement.style.gridRowStart = segment.y
     hadElement.style.gridColumnStart = segment.x
@@ -39,7 +42,7 @@ export function naHadovi(position, {ignoreHead = false} = {}) {
             return equalPositions(segment, position)
     })
 }
-
+// Funkce, která když se hlava hada srazí se zbytkem těla, spustí se funkce
 export function kolizeHada() {
     return naHadovi(teloHada[0], { ignoreHead: true})
 }
@@ -59,7 +62,7 @@ function addSegments() {
 export function hlavaHada() {
     return teloHada[0]
 }
-
+// Funkce pro hardmode
 hardMode.addEventListener('change', function() { 
     if (this.checked) {
         if(confirm('Vážně chcete spustit Těžký režim?')) {

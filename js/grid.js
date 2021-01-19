@@ -1,6 +1,5 @@
 const VELIKOST_POLE = 21
 
-
 export function randomGridPosition() {
     return {
         x: Math.floor(Math.random() * VELIKOST_POLE) +1,

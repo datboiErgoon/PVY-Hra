@@ -1,7 +1,7 @@
 let inputSmer = {x: 0, y: 0}
 let posledniInputSmeru = { x:0, y:0 }
 
-
+// Ovládání hada 
 window.addEventListener('keydown', e => {
     
     switch (e.key) {

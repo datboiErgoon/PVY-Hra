@@ -1,3 +1,5 @@
+// Při této hře byly použity funkce import/export, jelikož jsem dokázal pochopil, jak to vše funguje
+
 import { update as updateHad, draw as drawHad, RYCHLOST_HADA, hlavaHada, kolizeHada } from './had.js'
 import { update as updateJidlo, draw as drawJidlo } from './jidlo.js'
 import { zaPolem } from './grid.js'
@@ -20,7 +22,7 @@ function main(currentTime) {
        return
     }
 
-
+// Render pozice hada 
     window.requestAnimationFrame(main)
     const sekundyOdPoslednihoRenderu = (currentTime - posledniRender) / 1000
     if (sekundyOdPoslednihoRenderu < 1 / RYCHLOST_HADA) return
@@ -29,9 +31,7 @@ function main(currentTime) {
     
     
     posledniRender = currentTime
-/**/
     update()
-/**/
     draw()
 }
 
