@@ -6,13 +6,16 @@ let posledniRender = 0
 let gameOver = false
 const herniPlocha = document.getElementById('herniPlocha')
 let whiteTheme = document.getElementById("theme");
+let audio2 = new Audio('sound/game_over.mp3');
 
 
 // Vyvolání funkce na prohrání hry.
 function main(currentTime) {
     if(gameOver) {
+        audio2.play()
+        audio2.volume = 0.4;
        if(confirm('Prohráli jste. Stiskněte OK a zkuste to znovu.')) {
-           window.location = 'index.html'
+            window.location = 'index.html'
        }
        return
     }
@@ -64,11 +67,6 @@ whiteTheme.addEventListener('change', function() {
       document.getElementById("hdva").style.color = "black";
       document.getElementById("hdva").style.borderColor = "black";
       document.getElementById("dif2").style.color = "black";
-        
-
-      
-      
-
     } else {
       document.body.style.backgroundColor = "black";
       document.body.style.color = "white";
@@ -83,4 +81,3 @@ whiteTheme.addEventListener('change', function() {
       document.getElementById("dif2").style.color = "white";
     }
   });
-

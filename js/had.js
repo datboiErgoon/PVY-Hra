@@ -1,10 +1,10 @@
 import { getInputDirection } from "./input.js"
-export let RYCHLOST_HADA = 8
+export let RYCHLOST_HADA = 9
 
 const teloHada= [{ x: 11, y:11 }]
 let hardMode = document.getElementById("hard");
-
 let newSegments = 0
+let audio1 = new Audio('sound/hardmode.mp3');
 
 export function update() {
     addSegments()
@@ -54,7 +54,6 @@ function addSegments() {
     }
 
     newSegments = 0
-
 }
 
 export function hlavaHada() {
@@ -66,9 +65,13 @@ hardMode.addEventListener('change', function() {
         if(confirm('Vážně chcete spustit Těžký režim?')) {
             confirm('Těžký režim je doporučen jen pro ty nejnáročnější hráče hry Snake. Opravdu si přejete pokračovat?')
         }
+        audio1.play()
+        audio1.volume = 0.4;
      RYCHLOST_HADA = 21;
-    } 
+     }
     else {
-      RYCHLOST_HADA = 8;
+      RYCHLOST_HADA = 9;
+      audio1.pause();
+      audio1.currentTime = 0;
       }
     });
