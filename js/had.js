@@ -69,7 +69,7 @@ hardMode.addEventListener('change', function() {
             confirm('Těžký režim je doporučen jen pro ty nejnáročnější hráče hry Snake. Opravdu si přejete pokračovat?')
         }
         audio1.play()
-        audio1.volume = 0.4;
+        audio1.volume = 0.3;
      RYCHLOST_HADA = 21;
      }
     else {

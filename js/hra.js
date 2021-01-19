@@ -15,7 +15,7 @@ let audio2 = new Audio('sound/game_over.mp3');
 function main(currentTime) {
     if(gameOver) {
         audio2.play()
-        audio2.volume = 0.4;
+        audio2.volume = 0.35;
        if(confirm('Prohráli jste. Stiskněte OK a zkuste to znovu.')) {
             window.location = 'index.html'
        }
