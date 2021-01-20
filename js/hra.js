@@ -1,7 +1,7 @@
 // Při této hře byly použity funkce import/export, jelikož jsem dokázal pochopil, jak to vše funguje
 
 import { update as updateHad, draw as drawHad, RYCHLOST_HADA, hlavaHada, kolizeHada } from './had.js'
-import { update as updateJidlo, draw as drawJidlo } from './jidlo.js'
+import { update as updateJidlo, draw as drawJidlo, score } from './jidlo.js'
 import { zaPolem } from './grid.js'
 
 let posledniRender = 0
@@ -16,7 +16,7 @@ function main(currentTime) {
     if(gameOver) {
         audio2.play()
         audio2.volume = 0.35;
-       if(confirm('Prohráli jste. Stiskněte OK a zkuste to znovu.')) {
+       if(confirm('Prohráli jste. Stiskněte OK a zkuste to znovu. \nVaše skóre bylo: ' + score )) {
             window.location = 'index.html'
        }
        return

@@ -5,6 +5,7 @@ import { naHadovi, zvetseniHada } from './had.js'
 let jidlo = randomPoziceJidla()
 export let EXPANSION_RATE = 2
 let audio3 = new Audio('sound/food.mp3');
+export let score = 0;
 
 // Funkce, která poté, co had projede přes jídlo, zvětší se velikost hada (EXPANSION_RATE) a jídlu dává random pozici
 export function update() {
@@ -13,8 +14,15 @@ export function update() {
         audio3.volume = 0.5;
         zvetseniHada(EXPANSION_RATE)
         jidlo = randomPoziceJidla()
+        create();
     }
 }
+
+// Funkce která počítá skóre
+function create() {
+    score++;
+}
+
 // Funkce, která vykreslí jídlo na herní plochu
 export function draw(herniPlocha){
     const jidloElement = document.createElement('div')
